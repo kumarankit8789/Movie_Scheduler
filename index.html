@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h5 id="project-info">GITHUB PRACTICE PROJECT</h5>
+        <h1 style="margin: 1%;">Movie WatchList</h1>
+        <p id="p-text">Practice CRUD, DOM manipulation and the github pull Request workflow.</p>
+        <section class="container c1">
+            <section style="width: 100%;height: 10%;"><h3>Add / Update Movies</h3></section>
+            <section style="width: 100%;height: 80%; display: flex;margin-top: 2%;align-items: center;justify-content: space-evenly;">
+                <section id="block1">
+                    <label for="title" class="label-blocks">Movie Title</label>
+                    <input type="text" id="title" class="input-blocks">
+                    <br>
+                    <label for="releaseyear" class="label-blocks">Release Year</label>
+                    <input type="text" id="releaseyear" class="input-blocks">
+                </section>
+                <section id="block2">
+                    <label for="genre" class="label-blocks">Genre</label>
+                    <input type="text" id="genre" class="input-blocks">
+                    <br>
+                    <label for="Status" class="label-blocks">Status</label>
+                    <select id="Status" class="input-blocks">
+                        <option value="1">Planned</option>
+                        <option value="2">Watched</option>
+                    </select>
+                </section>
+            </section>
+            <section style="width: 100%;height: 10%; display: flex;justify-content: flex-start;align-items: center;">
+                <button class="btns bt1" id="update">Update Movie</button>
+                <button class="btns bt2" id="cancel">Cancel Edit</button>
+            </section>
+        </section>
+        <section class="container c2">
+            <section>
+                <input type="text" class="c2-box" id="search-box-c2" placeholder="Search Movies...">
+                <select name="" class="c2-box" id="search-item-c2">
+                    <option value="0">All Statuses</option>
+                    <option value="1">Planned</option>
+                    <option value="2">Watched</option>
+                </select>
+            </section>
+            <section id="card"></section>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
