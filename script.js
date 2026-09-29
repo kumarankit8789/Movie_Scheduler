@@ -18,9 +18,10 @@ const val = { "1": "Planned", "2": "Watched" };
 const car = document.querySelector("#card");
 function display(){
     car.innerHTML = "";
-    data.forEach(([movie_title, genre, year,status]) => {
+    data.forEach(([movie_title, genre, year,status],index) => {
         const card = document.createElement("section");
         card.className = "cards";
+        card.dataset.index = index;
         card.innerHTML = `
             <section class="card-left">
                 <h3>${movie_title}</h3>
@@ -40,3 +41,16 @@ function display(){
         car.appendChild(card);
     });
 }
+car.addEventListener("click", (e) => {
+    console.log(e.target);
+
+    const bt = e.target;
+    const index = Number(bt.closest(".cards").dataset.index);
+    if(bt.classList.contains("bttn1")){
+        data.splice(index,1);
+        display()
+    }else if(bt.classList.contains("bttn2")){
+        data[index][3] = "2";
+        display();
+    }
+});
